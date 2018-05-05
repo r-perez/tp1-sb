@@ -1,0 +1,14 @@
+       load_c   A1 -1
+       load_c   A0  7  ; argumento x da funcao
+       call    _fat    ; chama fat(x)
+       write    A3     ; registrador de retorno
+       stop
+_fat:  jmpz     A0 _zero
+       push     A0
+       add      A0  A1
+       call    _fat
+       pop      A0
+       multiply A3  A0
+       return      
+_zero: load_c   A3 1
+       return 

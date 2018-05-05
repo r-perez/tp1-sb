@@ -1,0 +1,7 @@
+load  A0  a
+load  A1  b
+add   A0 A1
+write A0    ; Show the answer to life, the universe and everything 
+stop
+a: .data 2 27
+b: .data 2 15

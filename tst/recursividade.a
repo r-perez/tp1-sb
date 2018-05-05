@@ -1,0 +1,12 @@
+      load_c  A0   00
+      load_c  A1   01
+      load_c  A2   64 ; Numero de chamadas recursivas
+      call   _foo
+      stop
+_foo: add      A0  A1
+      write    A0
+      move     A2 A3 
+      subtract A3  A0
+      jmpz     A3 _end
+      call   _foo
+_end: return

@@ -1,0 +1,9 @@
+       load_c    A0     00
+       load_c    A2     01      
+_loop: add       A0     A2 
+       load_c    A1     10      
+       subtract  A1     A0
+       write     A0
+       jmpz      A1    _end   
+       jump      _loop
+_end:  stop
