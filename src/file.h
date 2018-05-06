@@ -4,8 +4,9 @@
 #include <stdio.h>
 
 #include "translator.h"
+#include "symbols.h"
 
-void firstStep  (FILE* fp); 
-void secondStep (FILE* fp);
+void firstStep  (FILE* ifp, int* addr, SymbolsTable* t); 
+void secondStep (FILE* ifp, FILE* ofp, SymbolsTable* t);
 
 #endif
