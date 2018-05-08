@@ -13,7 +13,7 @@
 
 void  translateLine  (char* line, char* out, SymbolsTable* t);
 void  processSymbols (char* line, int* addr, SymbolsTable* t);
-char* translateReg   (char* reg);
+void translateReg (char* reg, char* out);
 
 
 #endif
