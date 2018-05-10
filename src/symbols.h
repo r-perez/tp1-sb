@@ -5,7 +5,7 @@
 
 #include "utility.h"
 
-#define MAXSYMBOLSIZE 100
+#define MAXSYMBOLSIZE 200
 #define TABLESIZE     64
 
 typedef struct {

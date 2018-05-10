@@ -10,6 +10,7 @@
 int main (void) {
     FILE* ifp;
     FILE* ofp;
+    FILE* hexfp;
     
     SymbolsTable t;
 
@@ -17,16 +18,23 @@ int main (void) {
 
     int addr = 0;
     
-    ifp = fopen("contador.a","r");
+    ifp = fopen("test.a","r");
     firstStep(ifp, &addr, &t);
     fclose(ifp);
 
-    ifp = fopen("contador.a","r");
-    ofp = fopen("contador.out","w");
+    ifp = fopen("test.a","r");
+    ofp = fopen("test.out","w");
     secondStep(ifp, ofp, &t);
-    
+
     fclose(ifp);
     fclose(ofp);
+    
+    ofp   = fopen("test.out","r");
+    hexfp = fopen("test.hex","w");
+    bin2hex(ofp, hexfp);
+    
+    fclose(ofp);
+    fclose(hexfp);
     
     return 0;
 }

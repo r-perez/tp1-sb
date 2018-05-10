@@ -1,5 +1,8 @@
 #include "symbols.h"
 
+/* debug */
+#include <stdio.h>
+
 void initSymbolsTable (SymbolsTable* t) {
     for (int i = 0; i < TABLESIZE; i++) {
         t->rows[i].rowIsSet = 0;
@@ -10,6 +13,8 @@ void insertSymbolToTable (char* symbol, int addr, SymbolsTable* t) {
     int pos = hashSymbol(symbol) % TABLESIZE;
     char addrString[10];
 
+    ///* debug */ printf("--%d--", addr);
+    
     constantTo9bitString(addr, addrString);
 
     if (!t->rows[pos].rowIsSet) {

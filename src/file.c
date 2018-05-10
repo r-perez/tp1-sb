@@ -25,3 +25,26 @@ void secondStep (FILE* ifp, FILE* ofp, SymbolsTable* t) {
         fprintf(ofp, "%s", outBuffer);
     }
 }
+
+void bin2hex (FILE* ifp, FILE* ofp) {
+    int i = 0;
+    int k = 0;
+    char c;   
+    
+    while ((c = fgetc(ifp)) != EOF) {
+        if (i == 0) {
+            fprintf(ofp, "%d ", k);
+            k++;
+        }
+        
+        if (i == 4)
+            fprintf(ofp, " ");
+
+        fprintf(ofp, "%c", c);
+
+        i = (i+1) % 8;
+        
+        if (i == 0)
+            fprintf(ofp, "\n");
+    }
+}

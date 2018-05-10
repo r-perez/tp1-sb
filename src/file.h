@@ -8,5 +8,6 @@
 
 void firstStep  (FILE* ifp, int* addr, SymbolsTable* t); 
 void secondStep (FILE* ifp, FILE* ofp, SymbolsTable* t);
+void bin2hex    (FILE* ifp, FILE* ofp);
 
 #endif
