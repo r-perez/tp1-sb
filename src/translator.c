@@ -78,7 +78,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
         token = strtok(NULL, " "); // get the number of allocated bytes
         allocatedBytes = atoi(token);
 
-        token = strtok(NULL, "\n"); // get the initial value
+        token = strtok(NULL, " \n"); // get the initial value
         value = atoi(token);
 
         constantToNbitString(value, 8*allocatedBytes, out);
@@ -95,7 +95,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
         translateReg(token, reg);
         strncpy(out+5, reg, 3);
         
-        token = strtok(NULL, "\n"); // gets dst label
+        token = strtok(NULL, " \n"); // gets dst label
 
         // if first character is a letter, I'm assuming it's a
         // label name, otherwhise I assume it's a constant
@@ -116,7 +116,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
         translateReg(token, reg);
         strncpy(out+5, reg, 3);
         
-        token = strtok(NULL, "\n"); // gets dst label
+        token = strtok(NULL, " \n"); // gets dst label
 
         // if first character is a letter, I'm assuming it's a
         // label name, otherwhise I assume it's a constant
@@ -133,7 +133,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
         
         strncpy(out+5,"000000000", 10);
         
-        token = strtok(NULL, "\n"); // gets dst register
+        token = strtok(NULL, " \n"); // gets dst register
 
         char reg[3];
         translateReg(token, reg);
@@ -147,7 +147,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
         
         strncpy(out+5,"000000000", 10);
         
-        token = strtok(NULL, "\n"); // gets dst register
+        token = strtok(NULL, " \n"); // gets dst register
 
         char reg[3];
         translateReg(token, reg);
@@ -167,7 +167,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
 
         strncpy(out+7,"0000000", 8);
 
-        token = strtok(NULL, "\n"); // gets second register
+        token = strtok(NULL, " \n"); // gets second register
         translateReg(token, reg);
 
         strncpy(out+14, reg, 3);
@@ -186,7 +186,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
 
         strncpy(out+7,"0000000", 8);
 
-        token = strtok(NULL, "\n"); // gets second register
+        token = strtok(NULL, " \n"); // gets second register
         translateReg(token, reg);
 
         strncpy(out+14, reg, 3);
@@ -205,7 +205,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
 
         strncpy(out+7,"0000000", 8);
 
-        token = strtok(NULL, "\n"); // gets second register
+        token = strtok(NULL, " \n"); // gets second register
         translateReg(token, reg);
 
         strncpy(out+14, reg, 3);
@@ -224,7 +224,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
 
         strncpy(out+7,"0000000", 8);
 
-        token = strtok(NULL, "\n"); // gets second register
+        token = strtok(NULL, " \n"); // gets second register
         translateReg(token, reg);
 
         strncpy(out+14, reg, 3);
@@ -237,7 +237,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
 
         strncpy(out+5, "00", 3);
         
-        token = strtok(NULL, "\n"); // gets address label
+        token = strtok(NULL, " \n"); // gets address label
 
         // if first character is a letter, I'm assuming it's a
         // label name, otherwhise I assume it's a constant
@@ -257,7 +257,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
         translateReg(token, reg);
         strncpy(out+5, reg, 3);
         
-        token = strtok(NULL, "\n"); // gets address label
+        token = strtok(NULL, " \n"); // gets address label
 
         // if first character is a letter, I'm assuming it's a
         // label name, otherwhise I assume it's a constant
@@ -277,7 +277,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
         translateReg(token, reg);
         strncpy(out+5, reg, 3);
         
-        token = strtok(NULL, "\n"); // gets address label
+        token = strtok(NULL, " \n"); // gets address label
 
         // if first character is a letter, I'm assuming it's a
         // label name, otherwhise I assume it's a constant
@@ -300,7 +300,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
 
         strncpy(out+7,"0000000", 8);
 
-        token = strtok(NULL, "\n"); // gets second register
+        token = strtok(NULL, " \n"); // gets second register
         translateReg(token, reg);
 
         strncpy(out+14, reg, 3);
@@ -313,7 +313,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
         
         strncpy(out+5,"000000000", 10);
         
-        token = strtok(NULL, "\n"); // gets dst register
+        token = strtok(NULL, " \n"); // gets dst register
 
         char reg[3];
         translateReg(token, reg);
@@ -327,7 +327,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
        
         strncpy(out+5,"000000000", 10);
         
-        token = strtok(NULL, "\n"); // gets dst register
+        token = strtok(NULL, " \n"); // gets dst register
 
         char reg[3];
         translateReg(token, reg);
@@ -341,7 +341,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
         
         strncpy(out+5, "00", 3);
         
-        token = strtok(NULL, "\n"); // gets address label
+        token = strtok(NULL, " \n"); // gets address label
         strncpy(out+7, getAddress(token, t), 10);
 
         return;
@@ -356,7 +356,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
         translateReg(token, reg);
         strncpy(out+5, reg, 3);
         
-        token = strtok(NULL, "\n"); // gets dst label
+        token = strtok(NULL, " \n"); // gets dst label
 
         // if first character is a letter, I'm assuming it's a
         // label name, otherwhise I assume it's a constant
@@ -377,7 +377,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
         translateReg(token, reg);
         strncpy(out+5, reg, 3);
         
-        token = strtok(NULL, "\n"); // gets dst label
+        token = strtok(NULL, " \n"); // gets dst label
 
         // if first character is a letter, I'm assuming it's a
         // label name, otherwhise I assume it's a constant
@@ -397,7 +397,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
         translateReg(token, reg);
         strncpy(out+5, reg, 3);
         
-        token = strtok(NULL, "\n"); // gets constant
+        token = strtok(NULL, " \n"); // gets constant
         constantTo9bitString(atoi(token), out+7);
 
         return;
@@ -414,7 +414,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
 
         strncpy(out+7,"0000000", 8);
 
-        token = strtok(NULL, "\n"); // gets second register
+        token = strtok(NULL, " \n"); // gets second register
         translateReg(token, reg);
 
         strncpy(out+14, reg, 3);
@@ -433,7 +433,7 @@ void translateLine (char* line, char* out, SymbolsTable* t) {
 
         strncpy(out+7,"0000000", 8);
 
-        token = strtok(NULL, "\n"); // gets second register
+        token = strtok(NULL, " \n"); // gets second register
         translateReg(token, reg);
 
         strncpy(out+14, reg, 3);

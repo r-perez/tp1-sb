@@ -1,24 +1,24 @@
-store A3 70
-read A3
-_var: .data 7 256
-load A3 _var
-write A2
-add A3 A2
+store    A3 70
+read     A3
+_var:    .data 7 256
+load     A3 _var
+write    A2
+add      A3 A2
 subtract A1 A0
 multiply A2 A3
-_fun: divide A1 A0
-jump _var
-jmpz A3 7
-jmpn A1 200
-move A1 A2
-push A3
-pop A1
-call _fun
-load_s A3 20
-store_s A1 10
-load_c A3 -5
-load_i A1 A2
-store_i A3 A1
-copytop A2
+_fun:    divide A1 A0
+jump     _var
+jmpz     A3 7
+jmpn     A1 200
+move     A1 A2
+push     A3
+pop      A1
+call     _fun
+load_s   A3 20
+store_s  A1 10
+load_c   A3 -5
+load_i   A1 A2
+store_i  A3 A1
+copytop  A2
 return
 stop
