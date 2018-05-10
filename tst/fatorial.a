@@ -6,7 +6,7 @@
 _fat:  jmpz     A0 _zero
        push     A0
        add      A0  A1
-       call    _fat
+       call    _fat    ; RECURSIVIDADE !!!
        pop      A0
        multiply A3  A0
        return      

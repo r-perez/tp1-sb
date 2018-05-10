@@ -8,5 +8,5 @@ _foo: add      A0  A1
       move     A2 A3 
       subtract A3  A0
       jmpz     A3 _end
-      call   _foo
+      call   _foo     ; RECURSIVIDADE !!!
 _end: return

@@ -5,5 +5,5 @@ _loop: add       A0     A2
        subtract  A1     A0
        write     A0
        jmpz      A1    _end   
-       jump      _loop
+       jump     _loop
 _end:  stop

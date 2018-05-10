@@ -1,17 +1,16 @@
-     load_c A0   0
-     load_c A2   01      
-_L0: add    A0   A2   
-     load_c A1   -5      
-     add    A1   A0
-     read   A3
-     push   A3
-     jmpn   A1  _L0   
-     load_c A0  0
-_L1: add    A0  A2   
-     load_c A1  -5     
-     add    A1  A0
-     pop    A3
-     write  A3
-     jmpn   A1  _L1   
-end: stop
-
+      load_c A0   0
+      load_c A2   01      
+_L0:  add    A0   A2   
+      load_c A1   -5      
+      add    A1   A0
+      read   A3
+      push   A3
+      jmpn   A1  _L0   
+      load_c A0  0
+_L1:  add    A0  A2   
+      load_c A1  -5     
+      add    A1  A0
+      pop    A3
+      write  A3
+      jmpn   A1  _L1   
+_end: stop
