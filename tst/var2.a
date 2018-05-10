@@ -1,0 +1,9 @@
+load_c A0  0
+load   A1 _A
+add    A0  A1
+load   A1 _B
+add    A0  A1
+write  A0
+stop
+_A: .data 2 32767
+_B: .data 2 -32768

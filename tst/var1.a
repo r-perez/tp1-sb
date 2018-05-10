@@ -1,0 +1,8 @@
+load   A0   _A
+load_c A1   1
+add    A0   A1
+store  A0   _A
+load   A1   _A
+write  A1
+stop
+_A: .data 2 10

@@ -1,0 +1,4 @@
+read     A0
+read     A1
+subtract A0 A1
+write    A0

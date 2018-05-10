@@ -1,0 +1,8 @@
+call _f
+stop
+_f: copytop A0
+    read A1           
+    store_s A1 2
+    load_s A3 2
+    write A3
+    return
