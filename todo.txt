@@ -1,0 +1,6 @@
+TODO
+
+[] Deal with comments
+[] Deal with multiple spaces
+[] Output a real .hex
+[] Make my code pretty
