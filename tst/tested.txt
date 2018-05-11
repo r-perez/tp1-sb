@@ -1,0 +1,12 @@
+[x] allinstructions.a
+[x] contador.a
+[x] divisao.a
+[x] fatorial.a
+[x] func.a
+[x] pilha.a
+[x] recursividade.a
+[x] soma.a
+[x] somatorio.a
+[x] sub
+[x] var1.a
+[x] var2.a

@@ -1,6 +1,6 @@
 TODO
 
-[ ] Deal with comments
 [ ] Output a real .hex
 [ ] Make my code pretty
 [x] Deal with multiple spaces
+[x] Deal with comments
