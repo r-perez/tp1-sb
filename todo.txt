@@ -1,6 +1,7 @@
 TODO
 
-[ ] Output a real .hex
-[ ] Make my code pretty
+[x] Treat some errors
+[x] Make my code pretty
+[x] Output a real .hex
 [x] Deal with multiple spaces
 [x] Deal with comments
