@@ -1,20 +1,20 @@
-prog: main.o file.o symbols.o translator.o utility.o
-	gcc -o prog main.o file.o symbols.o translator.o utility.o -Wall -ggdb3
+prog: Main.o File.o TableOfSymbols.o Translator.o Converter.o
+	gcc -o prog Main.o File.o TableOfSymbols.o Translator.o Converter.o -Wall
 
-main.o: main.c
-	gcc -c main.c
+Main.o: Main.c
+	gcc -c Main.c
 
-file.o: file.c
-	gcc -c file.c
+Converter.o: Converter.c
+	gcc -c Converter.c
 
-symbols.o: symbols.c
-	gcc -c symbols.c
+File.o: File.c
+	gcc -c File.c
 
-translator.o: translator.c
-	gcc -c translator.c
+TableOfSymbols.o: TableOfSymbols.c
+	gcc -c TableOfSymbols.c
 
-utility.o: utility.c
-	gcc -c utility.c
+Translator.o: Translator.c
+	gcc -c Translator.c
 
 clean:
 	rm *.o *.gch *~ vgcore*; echo "Done cleaning."
